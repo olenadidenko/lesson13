@@ -1,0 +1,351 @@
+[class*="__container"]{
+	max-width: 1240px;
+	margin: 0 auto;
+}
+ .wrapper{
+	overflow:clip;
+	min-height: 100%;
+ }
+ body{
+	background-color: dimgray;
+ }
+ .section__body{
+	background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+	width: 800px;
+	height: 800px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	animation: sky 10s ease-in-out 1 0.5s forwards;
+}
+@keyframes sky{
+	0%{background:rgb(16, 16, 60) ;}
+	10%{
+		background: rgb(241, 241, 162);
+	}
+	100%{
+		background:rgb(16, 16, 60) ;
+	}
+
+}
+.section__item {}
+.item-graund{
+	background: linear-gradient(109.6deg, rgb(9, 154, 151) 11.2%, rgb(21, 205, 168) 91.1%);
+	width: 1800px;
+	height: 1800px;
+	position: absolute;
+	bottom: -1600px;
+	right:-500px;
+	border-radius: 1000px 1000px 0 0;
+	
+}
+.item-tree__body{
+	width: 150px;
+	height: 150px;
+	background: rgb(13, 32, 13);
+	border-radius: 150px;
+	position: absolute;
+	bottom: 100px;
+	left: 20px;
+	z-index: 5;
+	animation: tree 8s ease-in-out 1 0.5s forwards;
+}
+.item-tree{
+
+}
+.item-tree__body::after{
+	content: "";
+	width: 10px;
+	height: 150px;
+	background: radial-gradient(circle at 10% 20%, rgb(98, 114, 128) 0%, rgb(52, 63, 51) 90.1%);
+	position: absolute;
+	top:100%;
+	left:45%;
+	z-index: 1;
+}
+@keyframes tree {
+	0%{background-color: rgb(13, 32, 13) }
+	20%{
+		background-color: rgb(63, 187, 63);
+	}
+	80%{
+		background-color: rgb(18, 84, 18);
+	}
+	90%{background-color: rgb(19, 67, 19);
+	}
+	100%{
+		background-color: rgb(10, 34, 10);
+	}
+	
+}
+.item-sun{
+	
+}
+.item-sun__body{
+	width: 150px;
+	height: 150px;
+	background:rgb(255, 219, 47);
+	border-radius: 150px;
+	position: absolute;
+	top: 400px;
+	left: -300px;
+	animation: sun 10s ease-in-out forwards;
+	z-index: 5;
+
+}
+@keyframes sun {
+	0%{background-color: rgb(255, 219, 47); }
+	20%{
+		transform: translate(700px,-300px);
+	}
+	40%{
+		transform: translate(700px, -300px);
+		;
+	}
+	80%{background-color: rgb(216, 213, 201)}
+	100%{
+		transform: translate(1700px, 300px);
+		
+	}
+	
+}
+
+.item-house{
+	width: 200px;
+	height: 150px;
+	background-color: blanchedalmond;
+	position: absolute;
+	bottom: 170px;
+	right: 200px;
+}
+.item__window-1 {
+	width: 50px;
+	height: 50px;
+	background-color: rgb(233, 157, 43);
+	position: absolute;
+	bottom: 60px;
+	right: 20px;
+	border-radius: 10px;
+}
+.item__door {
+	width: 50px;
+	height: 80px;
+	background-color: rgb(44, 30, 8);
+	position: absolute;
+	bottom: 0px;
+	right: 100px;
+	border-radius: 10px 10px 0 0;
+}
+.item__roof{
+	border-bottom: 80px solid rgb(46, 30, 30);
+	border-left: 150px solid transparent;
+	border-right: 150px solid transparent;
+top:-80px;
+left:-50px;
+	position: absolute;
+}
+.section{
+	margin-bottom: 40px;
+}
+/*----------------бегущая строка---------------*/
+.page__section {
+	padding: 50px;
+}
+.part {
+}
+.body-text {
+	width: 100%;
+	height: 80px;
+	background-color: blue;
+	overflow: hidden;
+}
+.part__text {
+	display: inline-block;
+	color: white;
+	line-height: 80px;
+	font-size: 40px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	animation: runningtext 50s linear reverse infinite;
+}
+@keyframes runningtext {
+	0% {
+		transform: translate(-100%, 0);
+	}
+	100%{
+		transform: translate(100%, 0);
+	}
+}
+/*----------------бегущие картинки---------------*/
+.body-picture{
+	width: 100%;
+	height: 340px;
+	background-color: blue;
+	overflow: hidden;
+}
+.part__picture li{
+	display: inline-block;
+}
+li img{
+	min-height: 300px;
+	padding: 30px;
+}
+img{
+	width: 100%;
+}
+@keyframes runningpicture {
+	0% {
+		transform: translate(-100%, 0);
+	}
+	100%{
+		transform: translate(100%, 0);
+	}
+}
+/*------!!!!!!!Не понимаю как сделать так что бы прокрутка картинок начиналась с левого края и крутились все картинки, не только те что влазят в экран.И что бы это была как бесконечная лента----*/
+.part__picture{
+	animation: runningpicture 50s linear reverse infinite ;
+}
+.body-picture:hover .part__picture{
+	animation-play-state: paused;
+}
+
+/*-------За допомогою transition потрібно зробити появу об'єкту при наведенні. Поява має відбутись за 3 секунди через 1 секунду після наведення. Також має змінись колір фону об'єкту після появи.-----*/
+.page__section {
+}
+.appearance {
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+.appearance img{
+	width: 100%;
+}
+.appearance__body {
+	
+}
+.appearance__item {
+}
+.item {
+}
+.item-shoes {
+	width: 30px;
+	height: 30px;
+	background-color:rgb(140, 140, 144);
+	border-radius: 15px;
+	position: absolute;
+	bottom:250px;
+	left: 200px;
+}
+.item-shoes:hover .item-shoes__zoom{
+	visibility:visible;
+	opacity: 1;
+	transition: opacity 3s ease 1s;
+} 
+.item-shoes__zoom {
+	visibility: hidden;
+	opacity: 0;
+	width: 500px;
+	height: auto;
+	position: absolute;
+	top: -650px;
+	left:-680px;
+}
+.item-shoes__zoom::before{
+	content: "";
+	width:180px;
+	height: 1px;
+	position: absolute;
+	bottom:0px;
+	left:500px;
+	background-color: black;
+}
+.item-shoes__zoom img, .item-hat__zoom img {
+	width: 100%;
+	border: 1px solid black;
+}
+.item-hat {
+	width: 30px;
+	height: 30px;
+	background-color:rgb(140, 140, 144);
+	border-radius: 15px;
+	position: absolute;
+	top:100px;
+	left: 600px;
+}
+.item-hat__zoom {
+	visibility: hidden;
+	opacity: 0;
+	width: 500px;
+	height: auto;
+	position: absolute;
+	top: 15px;
+	left:380px;
+}
+.item-hat__zoom::before{
+	content: "";
+	width:350px;
+	height: 1px;
+	position: absolute;
+	top:0px;
+	left:-350px;
+	background-color: black;
+}
+
+.item-hat:hover .item-hat__zoom{
+	visibility:visible;
+	opacity: 1;
+	transition: opacity 3s ease 1s;
+	
+}
+/*-------------animation text rotate-----------*/
+.page__section {
+
+}
+.rotate {
+	background-color: black;
+	min-height: 900px;
+}
+.rotate__item {
+}
+.item {
+}
+.item__text {
+}
+.text {
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	max-width: 800px;
+	margin: 0 auto;	
+}
+.text__title {
+	font-size: 90px;
+	text-align: center;
+	margin-bottom: 30px;
+	transform: translate(0px, 100%);
+	opacity: 0;
+	animation: epeare 1s ease forwards;
+}
+.text__subtitle {
+	font-size: 56px;
+	text-align: center;
+	margin-bottom: 30px;
+	transform: translate(0px, 100%);
+	opacity: 0;
+	animation: epeare 1s ease forwards 0.5s;
+}
+.text__main-text {
+	font-size: 30px;
+	margin-bottom: 30px;
+	transform: translate(0px, 100%);
+	opacity: 0;
+	animation: epeare 1s ease forwards 1s;
+}
+.text__main-text:last-child{
+	margin-bottom: 60px;
+}
+@keyframes epeare{
+	0%{transform: translate(0px, 50%);
+		opacity: 0;}
+	100%{ transform: translate(0px, 0%);
+	opacity: 1;
+	}
+}
